@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jobbaldo</title>
+  <!-- ------------------FAV ICON-------------------- -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/fav-icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/fav-icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/fav-icon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- ---------FONT AWESOME---------- -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ------------AOS LINK---------------------------- -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- ---------SWIPER JS LINK--------------- -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- -------BOOTSRAP CSS LINK--------- -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- -----CUSTOM CSS--------- -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar fixed-top ms-auto bg_1 navbar-expand-xxl rounded-start-pill py-md-4 px-md-3 ps-5 py-3" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="./images/homepage/nav_logo.png" alt="Logo" class="img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header bg_1">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body text-white bg_1">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <ul class="navbar-nav mx-auto align-items-xxl-center align-items-lg-start gap-xxl-5 gap-3 text-white"  style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                  <a class="nav-link active d-inline" aria-current="page" href="./index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  d-inline text-white" href="./jobs.html">Jobs</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  d-inline text-white" href="./community.html">Community</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link  d-inline text-white" href="#">Hire a Talent</a>
+                </li>
+                <li class="nav-item">
+                  <div class="d-flex gap-3 align-items-center mt-md-0 mt-3 ps-md-0 flex-wrap">
+                    <a href="#" class="btn btn-outline-light px-3">Login</a>
+                    <a href="./register.html" class="btn  btn-warning text-white bg_2 rounded-5 px-3 py-2">Register</a>
+                    <a href="#" class="text-black text-decoration-none border-start border-3 px-2 border-light">For Employer <i
+                        class="fa-solid fa-chevron-right"></i></a>
+                  </div>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <!-- -------------------BANNER SECTION----------------------- -->
+    <section class="banner bg_1 py-5">
+      <div class="banner_div container text-center py-md-4 mt-3 mt-xl-0 py-2">
+        <h1 class="text-white fw-semibold">Get the Right Job <span class="color_1 text_change"></span></h1>
+        <p class="fw-bold mt-2 fs-5">Over 50,000 openings delivered perfectly</p>
+        <form action="#" method="get" class="bg-light rounded-5 py-2 overflow-hidden mt-5">
+          <div class="row rounded-5">
+            <div class="col-md-3 d-flex align-items-center px-lg-4 mt-lg-0 mt-3  px-5">
+              <label for="search_by"><i class="fa-solid fa-magnifying-glass text-secondary fs-5"></i></label>
+              <input type="search" name="search_by" id="search_by" placeholder="Search by Skills, Jobs or Companies"
+                class="form-control  border-0 border-end border-2 border-secondary rounded-0  bg-transparent form_border">
+            </div>
+            <div class="col-md-3 d-flex px-lg-3 align-items-center mt-lg-0 mt-3  px-5">
+              <label for="location"><i class="fa-solid fa-location-crosshairs text-secondary fs-5"></i></label>
+              <input type="search" name="location" id="location" placeholder="Location"
+                class="form-control  border-0 border-end border-2 border-secondary rounded-0 bg-transparent form_border">
+            </div>
+            <div class="col-md-3 d-flex align-items-center px-lg-3 mt-lg-0 mt-3  px-5">
+              <label for="experience"><i class="fa-solid fa-briefcase text-secondary fs-5"></i></label>
+              <select name="experience" id="experience" aria-placeholder="Experience"
+                class="form-control  border-0 border-end border-2 border-secondary rounded-0 text-secondary bg-transparent form_border">
+                <option value="">Experience</option>
+                <option value="">Fresher</option>
+                <option value="">2-3 years</option>
+                <option value="">5+ years</option>
+              </select>
+            </div>
+            <div class="col-md-3 mt-lg-0 mt-3 "><button type="submit" class="btn btn-primary rounded-5 w-50">Search</button></div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- ------------------------------------------- -->
+    <!-- ------------POPULAR CATEGORIES------------------------- -->
+    <section class="popular_categories py-md-5 py-3">
+      <div class="popular_categories_div container">
+        <h2 class="text-black text-center fw-bolder">Popular Categories</h2>
+        <div class=" d-flex justify-content-center gap-3 mt-5 flex-wrap">
+          <a href="#"
+            class="border border-1 border-secondary-subtle px-3 py-2 d-inline-block text-decoration-none text-black box_hover"><i
+              class="fa-solid fa-house"></i> Remote <i class="fa-solid fa-chevron-right"></i></a>
+          <a href="#"
+            class="border border-1 border-secondary-subtle px-3 py-2 d-inline-block text-decoration-none text-black box_hover"><i
+              class="fa-solid fa-code"></i> Coding <i class="fa-solid fa-chevron-right"></i></a>
+          <a href="#"
+            class="border border-1 border-secondary-subtle px-3 py-2 d-inline-block text-decoration-none text-black box_hover"><i
+              class="fa-solid fa-users"></i> HR <i class="fa-solid fa-chevron-right"></i></a>
+          <a href="#"
+            class="border border-1 border-secondary-subtle px-3 py-2 d-inline-block text-decoration-none text-black box_hover"><i
+              class="fa-solid fa-briefcase"></i> Sales <i class="fa-solid fa-chevron-right"></i></a>
+          <a href="#"
+            class="border border-1 border-secondary-subtle px-3 py-2 d-inline-block text-decoration-none text-black box_hover"><i
+              class="fa-solid fa-pencil"></i> Desing &... <i class="fa-solid fa-chevron-right"></i></a>
+          <a href="#"
+            class="border border-1 border-secondary-subtle px-3 py-2 d-inline-block text-decoration-none text-black box_hover"><i
+              class="fa-solid fa-desktop"></i> Software &... <i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+        <div class=" d-flex justify-content-center gap-3 mt-4 flex-wrap">
+          <a href="#"
+            class="border border-1 border-secondary-subtle px-3 py-2 d-inline-block text-decoration-none text-black box_hover"><i
+              class="fa-solid fa-indian-rupee-sign"></i> Banking &... <i class="fa-solid fa-chevron-right"></i></a>
+          <a href="#"
+            class="border border-1 border-secondary-subtle px-3 py-2 d-inline-block text-decoration-none text-black box_hover"><i
+              class="fa-brands fa-hive"></i> Blockchain <i class="fa-solid fa-chevron-right"></i></a>
+          <a href="#"
+            class="border border-1 border-secondary-subtle px-3 py-2 d-inline-block text-decoration-none text-black box_hover"><i
+              class="fa-solid fa-gear"></i> Engineering <i class="fa-solid fa-chevron-right"></i></a>
+          <a href="#"
+            class="border border-1 border-secondary-subtle px-3 py-2 d-inline-block text-decoration-none text-black box_hover"><i
+              class="fa-solid fa-database"></i> Data Scien... <i class="fa-solid fa-chevron-right"></i></a>
+          <a href="#"
+            class="border border-1 border-secondary-subtle px-3 py-2 d-inline-block text-decoration-none text-black box_hover">+
+            More <i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------------------- -->
+    <!-- ------------UPLOAD YOUR RESUME----------------------- -->
+    <section class="resume">
+      <div class="resume_div container">
+        <div class="row">
+          <div class="col-md-6" data-aos="zoom-in" data-aos-duration="4000">
+            <img src="./images/homepage/resume_image.png" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-6" data-aos="fade-left" data-aos-duration="4000">
+            <div class="d-md-block d-flex flex-column align-items-center mt-md-0 mt-5">
+              <p class="color_2">ATS SCANNER</p>
+              <h2 class="fw-bolder">Ready to <span class="color_2">impress?</span> <span class="d-block"><span
+                    class="color_1">Evaluate</span> Your resume score today?</span></h2>
+              <p class="fw-bold fs-4">Why should you check ?</p>
+              <div class="mt-5">
+                <p><i class="fa-regular fa-square-check text-success"></i> 7x more recruiter attention</p>
+                <p><i class="fa-regular fa-square-check text-success"></i> 7x more recruiter attention</p>
+                <p><i class="fa-regular fa-square-check text-success"></i> 7x more recruiter attention</p>
+              </div>
+              <button type="button" class="btn btn-warning text-white bg_3 btn-lg rounded-5 mt-3">Upload your
+                resume</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- --------------------------------------- -->
+    <!-- -------LOGO CAROUSAL SECTION----------------- -->
+    <section class="logo_carousal py-md-5 py-4">
+      <div class="logo_carousal_div container">
+        <div class="logo_a logo_container mt-lg-0 mt-4">
+          <div class="logo_slide logo_slide_a">
+            <img src="./images/homepage/logo_slide_a1.png" alt="Logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_a2.png" alt="Logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_a3.png" alt="Logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_a4.png" alt="Logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_a5.png" alt="Logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_a6.png" alt="Logo" class="img-fluid">
+          </div>
+          <div class="logo_slide logo_slide_a">
+            <img src="./images/homepage/logo_slide_a1.png" alt="Logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_a2.png" alt="Logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_a3.png" alt="Logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_a4.png" alt="Logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_a5.png" alt="Logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_a6.png" alt="Logo" class="img-fluid">
+          </div>
+        </div>
+        <div class="logo_b logo_container mt-lg-5 mt-3">
+          <div class="logo_slide logo_slide_b">
+            <img src="./images/homepage/logo_slide_b1.png" alt="logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_b2.png" alt="logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_b3.png" alt="logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_b4.png" alt="logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_b5.png" alt="logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_b6.png" alt="logo" class="img-fluid">
+          </div>
+          <div class="logo_slide logo_slide_b">
+            <img src="./images/homepage/logo_slide_b1.png" alt="logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_b2.png" alt="logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_b3.png" alt="logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_b4.png" alt="logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_b5.png" alt="logo" class="img-fluid">
+            <img src="./images/homepage/logo_slide_b6.png" alt="logo" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ------------TOP COMPANIES--------------- -->
+    <section class="top_companies py-md-5 py-3">
+      <div class="top_companies_div container">
+        <h2 class="fw-bolder text-center">Top Hiring Companies</h2>
+        <div class="row mt-md-5 mt-3">
+          <div class="col-xl-4 col-md-6 col-8">
+            <img src="./images/homepage/top_companies_image.png" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-xl-8 col-md-6 col-12 px-md-0 px-4">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide border d-flex flex-column text-start py-3 px-3 tilt">
+                  <div class="d-flex gap-4 align-items-center">
+                    <img src="./images/homepage/top_companies_google.png" alt="Image" class="img-fluid">
+                    <p class="fw-medium d-inline-block fs-4">Google</p>
+                  </div>
+                  <p class="text-secondary smaller_font mt-4">Offers a variety of online services and products.</p>
+                  <p class="fw-medium fs-6">12109 Jobs</p>
+                </div>
+                <div class="swiper-slide border py-3 px-3 text-start tilt">
+                  <div class="d-flex gap-4 align-items-center">
+                    <img src="./images/homepage/top_companies_netflix.png" alt="Image" class="img-fluid">
+                    <p class="fw-medium d-inline-block fs-4">Netflix</p>
+                  </div>
+                  <p class="text-secondary smaller_font mt-4">Offers a variety of online services and products.</p>
+                  <p class="fw-medium fs-6">12109 Jobs</p>
+                </div>
+                <div class="swiper-slide border py-3 px-3 text-start tilt">
+                  <div class="d-flex gap-4 align-items-center">
+                    <img src="./images/homepage/top_companies_amazon.png" alt="Image" class="img-fluid">
+                    <p class="fw-medium d-inline-block fs-4">Amazon</p>
+                  </div>
+                  <p class="text-secondary smaller_font mt-4">Offers a variety of online services and products.</p>
+                  <p class="fw-medium fs-6">12109 Jobs</p>
+                </div>
+                <div class="swiper-slide border py-3 px-3 text-start tilt">
+                  <div class="d-flex gap-4 align-items-center">
+                    <img src="./images/homepage/top_companies_flipkart.png" alt="Image" class="img-fluid">
+                    <p class="fw-medium d-inline-block fs-4">Flipkart</p>
+                  </div>
+                  <p class="text-secondary smaller_font mt-4">Offers a variety of online services and products.</p>
+                  <p class="fw-medium fs-6">12109 Jobs</p>
+                </div>
+                <div class="swiper-slide border py-3 px-3 text-start tilt">
+                  <div class="d-flex gap-4 align-items-center">
+                    <img src="./images/homepage/top_companies_spotify.png" alt="Image" class="img-fluid">
+                    <p class="fw-medium d-inline-block fs-4">Spotify</p>
+                  </div>
+                  <p class="text-secondary smaller_font mt-4">Offers a variety of online services and products.</p>
+                  <p class="fw-medium fs-6">12109 Jobs</p>
+                </div>
+                <div class="swiper-slide border py-3 px-3 text-start tilt">
+                  <div class="d-flex gap-4 align-items-center">
+                    <img src="./images/homepage/top_companies_pwc.png" alt="Image" class="img-fluid">
+                    <p class="fw-medium d-inline-block fs-4">PWC</p>
+                  </div>
+                  <p class="text-secondary smaller_font mt-4">Offers a variety of online services and products.</p>
+                  <p class="fw-medium fs-6">12109 Jobs</p>
+                </div>
+                <div class="swiper-slide border py-3 px-3 text-start tilt">
+                  <div class="d-flex gap-4 align-items-center">
+                    <img src="./images/homepage/top_companies_google.png" alt="Image" class="img-fluid">
+                    <p class="fw-medium d-inline-block fs-4">Google</p>
+                  </div>
+                  <p class="text-secondary smaller_font mt-4">Offers a variety of online services and products.</p>
+                  <p class="fw-medium fs-6">12109 Jobs</p>
+                </div>
+                <div class="swiper-slide border py-3 px-3 text-start tilt">
+                  <div class="d-flex gap-4 align-items-center">
+                    <img src="./images/homepage/top_companies_google.png" alt="Image" class="img-fluid">
+                    <p class="fw-medium d-inline-block fs-4">Google</p>
+                  </div>
+                  <p class="text-secondary smaller_font mt-4">Offers a variety of online services and products.</p>
+                  <p class="fw-medium fs-6">12109 Jobs</p>
+                </div>
+                <div class="swiper-slide border py-3 px-3 text-start tilt">
+                  <div class="d-flex gap-4 align-items-center">
+                    <img src="./images/homepage/top_companies_google.png" alt="Image" class="img-fluid">
+                    <p class="fw-medium d-inline-block fs-4">Google</p>
+                  </div>
+                  <p class="text-secondary smaller_font mt-4">Offers a variety of online services and products.</p>
+                  <p class="fw-medium fs-6">12109 Jobs</p>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- --------------------------------- -->
+    <!-- -----------EXPLORE JOBS---------------------- -->
+    <section class="explore_jobs">
+      <div class="explore_jobs_div container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="./images/homepage/explore_jobs_image.png" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-md-6">
+            <div class="swiper_container">
+              <div class="swiper scrollSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div
+                      class="border d-flex justify-content-between px-4 py-3 align-items-center mt-4 flex-wrap gap-2">
+                      <p class="fw-bold">Full Stack Dev</p>
+                      <div
+                        class="rounded-5 bg_4 d-inline-block px-3 py-1 d-flex justify-content-center align-items-center">
+                        1089 Jobs</div>
+                    </div>
+                    <div
+                      class="border d-flex justify-content-between px-4 py-3 align-items-center mt-4 flex-wrap gap-2">
+                      <p class="fw-bold">Android Developer</p>
+                      <div
+                        class="rounded-5 bg_4 d-inline-block px-3 py-1 d-flex justify-content-center align-items-center">
+                        1089 Jobs</div>
+                    </div>
+                    <div
+                      class="border d-flex justify-content-between px-4 py-3 align-items-center mt-4 flex-wrap gap-2">
+                      <p class="fw-bold">Java Developer</p>
+                      <div
+                        class="rounded-5 bg_4 d-inline-block px-3 py-1 d-flex justify-content-center align-items-center">
+                        1089 Jobs</div>
+                    </div>
+                    <div
+                      class="border d-flex justify-content-between px-4 py-3 align-items-center mt-4 flex-wrap gap-2">
+                      <p class="fw-bold">Php Developer</p>
+                      <div
+                        class="rounded-5 bg_4 d-inline-block px-3 py-1 d-flex justify-content-center align-items-center">
+                        1089 Jobs</div>
+                    </div>
+                    <div
+                      class="border d-flex justify-content-between px-4 py-3 align-items-center mt-4 flex-wrap gap-2">
+                      <p class="fw-bold">Content Writer</p>
+                      <div
+                        class="rounded-5 bg_4 d-inline-block px-3 py-1 d-flex justify-content-center align-items-center">
+                        1089 Jobs</div>
+                    </div>
+                    <div
+                      class="border d-flex justify-content-between px-4 py-3 align-items-center mt-4 flex-wrap gap-2">
+                      <p class="fw-bold">Ui/Ux Designer</p>
+                      <div
+                        class="rounded-5 bg_4 d-inline-block px-3 py-1 d-flex justify-content-center align-items-center">
+                        1089 Jobs</div>
+                    </div>
+                    <div
+                      class="border d-flex justify-content-between px-4 py-3 align-items-center mt-4 flex-wrap gap-2">
+                      <p class="fw-bold">Digital Marketer</p>
+                      <div
+                        class="rounded-5 bg_4 d-inline-block px-3 py-1 d-flex justify-content-center align-items-center">
+                        1089 Jobs</div>
+                    </div>
+                    <div
+                      class="border d-flex justify-content-between px-4 py-3 align-items-center mt-4 flex-wrap gap-2">
+                      <p class="fw-bold">Node Js Developer</p>
+                      <div
+                        class="rounded-5 bg_4 d-inline-block px-3 py-1 d-flex justify-content-center align-items-center">
+                        1089 Jobs</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- --------------------------------------------------------- -->
+    <!-- -------------REVIEWS SECTION---------------------- -->
+    <section class="reviews py-md-5 py-3">
+      <div class="reviews_div container">
+        <div data-aos="fade-down" data-aos-duration="4000">
+          <p class="color_2 text-center">Our Reviews</p>
+        <h2 class="fw-bolder text-center">What Our Users Say</h2>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="3000">
+          <div class="row mt-5">
+            <div class="col-lg-3 col-md-6 tilt mt-lg-0 mt-3">
+              <div class="review_card border py-2 px-2">
+                <img src="./images/homepage/review_image.png" alt="Image" class="img-fluid">
+                <div class="d-flex justify-content-between review_name mt-2">
+                  <p class="fw-bold smaller_font">John Wick <span class="text-secondary d-block fw-normal">- Web
+                      Developer, Genius Co.</span></p>
+                  <p class="text-warning smaller_font"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span
+                      class="fw-bold color_3">4.3 +</span></p>
+                </div>
+                <p class="smaller_font"><i class="fa-solid fa-quote-left"></i> Lorem Ipsum is simply dummy text of the
+                  printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                  the 1500s <i class="fa-solid fa-quote-right"></i></p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 tilt mt-lg-0 mt-3">
+              <div class="review_card border py-2 px-2">
+                <img src="./images/homepage/review_image.png" alt="Image" class="img-fluid">
+                <div class="d-flex justify-content-between review_name mt-2">
+                  <p class="fw-bold smaller_font">John Wick <span class="text-secondary d-block fw-normal">- Web
+                      Developer, Genius Co.</span></p>
+                  <p class="text-warning smaller_font"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span
+                      class="fw-bold color_3">4.3 +</span></p>
+                </div>
+                <p class="smaller_font"><i class="fa-solid fa-quote-left"></i> Lorem Ipsum is simply dummy text of the
+                  printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                  the 1500s <i class="fa-solid fa-quote-right"></i></p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6  tilt mt-lg-0 mt-3">
+              <div class="review_card border py-2 px-2">
+                <img src="./images/homepage/review_image.png" alt="Image" class="img-fluid">
+                <div class="d-flex justify-content-between review_name mt-2">
+                  <p class="fw-bold smaller_font">John Wick <span class="text-secondary d-block fw-normal">- Web
+                      Developer, Genius Co.</span></p>
+                  <p class="text-warning smaller_font"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span
+                      class="fw-bold color_3">4.3 +</span></p>
+                </div>
+                <p class="smaller_font"><i class="fa-solid fa-quote-left"></i> Lorem Ipsum is simply dummy text of the
+                  printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                  the 1500s <i class="fa-solid fa-quote-right"></i></p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6   tilt mt-lg-0 mt-3">
+              <div class="review_card border py-2 px-2">
+                <img src="./images/homepage/review_image.png" alt="Image" class="img-fluid">
+                <div class="d-flex justify-content-between review_name mt-2">
+                  <p class="fw-bold smaller_font">John Wick <span class="text-secondary d-block fw-normal">- Web
+                      Developer, Genius Co.</span></p>
+                  <p class="text-warning smaller_font"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span
+                      class="fw-bold color_3">4.3 +</span></p>
+                </div>
+                <p class="smaller_font"><i class="fa-solid fa-quote-left"></i> Lorem Ipsum is simply dummy text of the
+                  printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                  the 1500s <i class="fa-solid fa-quote-right"></i></p>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-lg-3 col-md-6   tilt mt-lg-0 mt-3">
+              <div class="review_card border py-2 px-2">
+                <img src="./images/homepage/review_image.png" alt="Image" class="img-fluid">
+                <div class="d-flex justify-content-between review_name mt-2">
+                  <p class="fw-bold smaller_font">John Wick <span class="text-secondary d-block fw-normal">- Web
+                      Developer, Genius Co.</span></p>
+                  <p class="text-warning smaller_font"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span
+                      class="fw-bold color_3">4.3 +</span></p>
+                </div>
+                <p class="smaller_font"><i class="fa-solid fa-quote-left"></i> Lorem Ipsum is simply dummy text of the
+                  printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                  the 1500s <i class="fa-solid fa-quote-right"></i></p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6   tilt mt-lg-0 mt-3">
+              <div class="review_card border py-2 px-2">
+                <img src="./images/homepage/review_image.png" alt="Image" class="img-fluid">
+                <div class="d-flex justify-content-between review_name mt-2">
+                  <p class="fw-bold smaller_font">John Wick <span class="text-secondary d-block fw-normal">- Web
+                      Developer, Genius Co.</span></p>
+                  <p class="text-warning smaller_font"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span
+                      class="fw-bold color_3">4.3 +</span></p>
+                </div>
+                <p class="smaller_font"><i class="fa-solid fa-quote-left"></i> Lorem Ipsum is simply dummy text of the
+                  printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                  the 1500s <i class="fa-solid fa-quote-right"></i></p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6   tilt mt-lg-0 mt-3">
+              <div class="review_card border py-2 px-2">
+                <img src="./images/homepage/review_image.png" alt="Image" class="img-fluid">
+                <div class="d-flex justify-content-between review_name mt-2">
+                  <p class="fw-bold smaller_font">John Wick <span class="text-secondary d-block fw-normal">- Web
+                      Developer, Genius Co.</span></p>
+                  <p class="text-warning smaller_font"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span
+                      class="fw-bold color_3">4.3 +</span></p>
+                </div>
+                <p class="smaller_font"><i class="fa-solid fa-quote-left"></i> Lorem Ipsum is simply dummy text of the
+                  printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                  the 1500s <i class="fa-solid fa-quote-right"></i></p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 tilt mt-lg-0 mt-3">
+              <div class="review_card border py-2 px-2">
+                <img src="./images/homepage/review_image.png" alt="Image" class="img-fluid">
+                <div class="d-flex justify-content-between review_name mt-2">
+                  <p class="fw-bold smaller_font">John Wick <span class="text-secondary d-block fw-normal">- Web
+                      Developer, Genius Co.</span></p>
+                  <p class="text-warning smaller_font"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span
+                      class="fw-bold color_3">4.3 +</span></p>
+                </div>
+                <p class="smaller_font"><i class="fa-solid fa-quote-left"></i> Lorem Ipsum is simply dummy text of the
+                  printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                  the 1500s <i class="fa-solid fa-quote-right"></i></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <a href="#" class="fw-bold d-block">View All <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+    <!-- ---------------------------------------- -->
+    <!-- -----------INSTALL NOW SECTION--------------------------- -->
+    <section class="install_now py-md-5">
+      <div class="install_now_div container py-4 px-5 ">
+        <div class="row">
+          <div class="col-xl-5 col-lg-12 mb-xl-0 mb-4">
+            <h2 class="fw-bolder">The Job Hunt Made Simple <span class="d-block">- Install Now</span></h2>
+            <p class="text-secondary">Available for both Android and iOS apps</p>
+            <form action="#" class="w-100 position-relative d-md-block d-flex flex-column">
+              <input type="email" class="form-control rounded-5 py-3" name="email_phone" id="email_phone"
+                placeholder="Enter email or mobile number...">
+              <button type="submit"
+                class="btn btn-primary rounded-5 position-absolute end-0 translate-middle top-50 install_now_btn">Get
+                Link</button>
+            </form>
+            <div class="d-flex gap-3 mt-4 flex-wrap">
+              <div class="d-flex gap-3 px-2 bg_white rounded-2 py-2">
+                <img src="./images/homepage/playstore.png" alt="Image" class="img-fluid">
+                <p class="smaller_font fs-6">Get it on <span class="d-block fw-medium text-black">Google PLay</span></p>
+              </div>
+              <div class="d-flex gap-3 bg_black text-white px-2 rounded-2 py-2">
+                <img src="./images/homepage/apple_store.png" alt="Image" class="img-fluid">
+                <p class="smaller_font fs-6">Get it on <span class="d-block fw-medium">Google PLay</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3  d-flex flex-column gap-4 col-lg-6">
+            <div>
+              <img src="./images/homepage/scan_to_download.png" alt="Image" class="img-fluid">
+              <p class="text-warning d-inline-block"> <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i> <span
+                  class="fs-4 text-black">4.6+ <span class="d-block fs-6">5L reviews</span></span></p>
+            </div>
+            <div class="d-flex gap-3 align-items-baseline">
+              <i class="fa-regular fa-circle-down text-primary fs-3"></i>
+              <p class="fw-bold fs-2">50M+ <span class="d-block fs-6">App Downloads</span></p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-6">
+            <img src="./images/homepage/install_now_group_image.png" alt="Image" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ----------------------------------------- -->
+    <!-- --------------JOIN OUR COMMUNITY------------------ -->
+    <section class="join_our_community py-5">
+      <div class="join_our_community_div container position-relative py-5 text-center mt-lg-0 mt-5">
+        <img src="./images/homepage/join_our_commnity_logo.png" alt="Logo"
+          class="img-fluid d-block mx-auto position-absolute top-0 start-0 end-0 translate-middle-y">
+        <h4 class="fw-bolder text-center mt-5">“Join our Community and get help from your buddies”</h4>
+        <p class="text-center mt-3">Over 120 communities are there, Join Now and make yourself confident with your
+          friends</p>
+        <div class="d-flex justify-content-center gap-3 mt-5 flex-wrap">
+          <img src="./images/homepage/join_community_1.png" alt="Image" class="img-fluid" width="60px">
+          <img src="./images/homepage/join_community_2.png" alt="Image" class="img-fluid" width="60px">
+          <img src="./images/homepage/join_community_3.png" alt="Image" class="img-fluid" width="60px">
+          <img src="./images/homepage/join_community_4.png" alt="Image" class="img-fluid" width="60px">
+          <img src="./images/homepage/join_community_5.png" alt="Image" class="img-fluid" width="60px">
+          <img src="./images/homepage/join_community_6.png" alt="Image" class="img-fluid" width="60px">
+          <img src="./images/homepage/join_community_7.png" alt="Image" class="img-fluid" width="60px">
+        </div>
+        <a href="#" class="btn btn-warning text-white mt-4">Explore Now</a>
+      </div>
+    </section>
+    <!-- ------------------------------------------------------ -->
+    <!-- --------------POST A JOB--------------------------------- -->
+    <section class="post_a_job">
+      <div class="post_a_job_div container rounded-5 py-4">
+        <div class="row">
+          <div class="col-lg-5 col-md-12 ">
+            <div>
+              <img src="./images/homepage/post_a_job_image.png" alt="Image" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-lg-7 col-md-12 px-lg-0 px-5">
+            <div>
+              <p class="fw-medium color_4">For Employers</p>
+              <p>Let's Find the Right People for Your Business!"</p>
+              <h4 class="text-black fw-bold">We Help You Build Your Dream Team!</h4>
+              <div class="mt-4">
+                <p><i class="fa-regular fa-circle-check text-success"></i> Lorem Ipsum is simply dummy text of the
+                  printing and typesetting industry.</p>
+                <p><i class="fa-regular fa-circle-check text-success"></i> Lorem Ipsum is simply dummy text of the
+                  printing.</p>
+                <p><i class="fa-regular fa-circle-check text-success"></i> Lorem Ipsum is simply dummy text of the
+                  printing.</p>
+                <p><i class="fa-regular fa-circle-check text-success"></i> Lorem Ipsum is simply dummy text of the
+                  printing.</p>
+              </div>
+              <p class="text-secondary fs-5 mt-5">Find the best candidate from 5 crore+ active job seekers!</p>
+              <a href="#" class="btn btn-warning btn-lg text-white bg_2">Post a Job <i
+                  class="fa-solid fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -------------------------------------------------- -->
+    <!-- -----------------JOB Alerts--------------------- -->
+    <section class="job_alerts py-md-5 py-3">
+      <div class="job_alerts_div container">
+        <div class="row">
+          <div class="col-md-6" data-aos="fade-right" data-aos-duration="4000">
+            <p class="fw-bold fs-5">Get Hired Faster with <span class="color_2">Personalized</span> Job Alerts!</p>
+            <h2 class="fw-bold">Let <span class="color_2">Opportunities</span> Find <span class="color_1">You</span> -
+              <span class="d-block">Enable Job Alerts</span>
+            </h2>
+            <a href="#" class="btn btn-primary rounded-5 btn-lg mt-5">Get Job Alert</a>
+          </div>
+          <div class="col-md-6" data-aos="fade-left" data-aos-duration="4000">
+            <img src="./images/homepage/job_alerts_image.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- ------------------FOOTER SECTION---------------------- -->
+  <footer class="py-md-5 py-3">
+    <div class="footer_div container">
+      <div class="row">
+        <div class="col-lg-3 col-md-12 mt-lg-0 mt-md-4 mt-4">
+          <img src="./images/homepage/footer_logo.png" alt="Logo" class="img-fluid footer_logo">
+          <p class="fw-bold mt-4">Connect with us</p>
+          <div class="d-flex gap-3 mt-3">
+            <img src="./images/homepage/linkedin_image.png" alt="Image" class="img-fluid">
+            <img src="./images/homepage/instagram_image.png" alt="Image" class="img-fluid">
+            <img src="./images/homepage/facebook_image.png" alt="Image" class="img-fluid">
+            <img src="./images/homepage/twitter X _image.png" alt="Image" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mt-lg-0 mt-md-4 mt-4">
+          <div class="list-group footer-links">
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 fw-medium">About Us</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 fw-medium">Careers</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 fw-medium">Categories</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 fw-medium">Sitemap</a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mt-lg-0 mt-md-4 mt-4">
+          <div class="list-group footer-links">
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 fw-medium">Help Center</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 fw-medium">Notices</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 fw-medium">Report
+              Issue</a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 mt-lg-0 mt-md-4 mt-4">
+          <div class="list-group footer-links">
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 fw-medium">Privacy
+              Policy</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 fw-medium">Terms and
+              Conditions</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 fw-medium">Froud Alert</a>
+            <a href="#" class="list-group-item list-group-item-action bg-transparent border-0 fw-medium">Trust and
+              Safety</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mt-lg-0 mt-md-4 mt-4">
+          <div class="bg-white bg-opacity-50 py-2 px-2 rounded-3 d-flex flex-wrap">
+            <p class="fw-bold">Apply on the go</p>
+            <p class="text-secondary w-100">Get real-time job updates on our app</p>
+            <div class="d-flex gap-2">
+              <img src="./images/homepage/play store link.png" alt="Image" class="img-fluid">
+              <img src="./images/homepage/apple store link.png" alt="Image" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- --------------------------------------------- -->
+  <!-- ------- BOOTSRAP JS LINK---------- -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- ------------SWIPER JS -------------- -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- -----------INDEX JS------------- -->
+  <script src="./js/index.js"></script>
+  <!-- -------------------AOS JS ------------------ -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
+</html>

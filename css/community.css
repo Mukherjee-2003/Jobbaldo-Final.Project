@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", serif;
+}
+
+.bg_1 {
+    background-color: #3d8eff;
+}
+
+.active {
+    color: #ffc067 !important;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.post_bar {
+    box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
+    ;
+}
+
+.small_font {
+    font-size: 13px;
+}
+
+.mont_family {
+    font-family: "Montserrat", serif;
+}
+
+.remove_margin {
+    margin: 0 !important;
+}
+footer {
+    background-image: url("../images/homepage/footer_background.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* -------------------NAV HOVER------------------------- */
+.nav-link:hover {
+    color: #ffcc00 !important;
+  } 
+  .nav-link {
+    position: relative;
+    padding-bottom: 5px;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffcc00;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .nav_tool {
+    transition: all 0.3s ease-out;
+  }
+  .nav_profile {
+    transition: all 0.3s ease-out;
+  }
+  .nav_tool:hover {
+    transform: scaleX(1.05);
+    transform: translateY(-5px);
+  }
+  .nav_profile:hover {
+    box-shadow: 0 0 5px #ffcc00;
+    border-radius: 50%;
+  } 
+  /* ------------------BUTTON HOVER----------------- */
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  .btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  /* ------------------------------------------------------- */
+  /* -------------------FOOTER HOVER------------------- */
+  .footer-links a {
+    transition: all 0.3s ease-in-out;
+  }
+  
+.footer-links a:hover {
+    color: #007bff; 
+    transform: translateX(5px);
+  }
+  
+  .footer-links a::before {
+    content: "";
+    margin-right: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .footer-links a:hover::before {
+    content: "\21D2";
+    transform: translateX(5px);
+  }
+  /* --------------------------------------------------------------- */
+  /* --------------------------RESPONSIVE SECTION---------------------------- */
+  @media screen and (max-width: 991px) {
+    footer {
+       background-size: cover;
+   }
+} 
+@media screen and (max-width: 767px) {
+    .middle {
+        height: 600px;
+        overflow-y: scroll;
+    }
+
+    .middle::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    .middle::-webkit-scrollbar-track {
+        background: #eee;
+    }
+
+    .middle::-webkit-scrollbar-thumb {
+        background: #3d8eff;
+    }
+
+    .middle::-webkit-scrollbar-thumb:hover {
+        background-color: #ffc067;
+    }
+    .communities_div {
+        height: 250px;
+        overflow-y: scroll;
+    }
+    .communities_div::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    .communities_div::-webkit-scrollbar-track {
+        background: #eee;
+    }
+
+    .communities_div::-webkit-scrollbar-thumb {
+        background: #3d8eff;
+    }
+
+    .communities_div::-webkit-scrollbar-thumb:hover {
+        background-color: #ffc067;
+    }
+    .footer_logo {
+        width: 250px;
+    }
+}
