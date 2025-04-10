@@ -121,10 +121,16 @@ h2 {
     overflow: hidden;
     white-space: nowrap;
 }
-.logo_slide {
+.logo_slide_a {
     animation: 10s logo_slide infinite linear;
     display: inline-block;
     overflow: hidden;
+}
+.logo_slide_b {
+    animation: 10s logo_slide_2 infinite linear;
+    display: inline-block;
+    overflow: hidden;
+    animation-direction: reverse;
 }
 .logo_slide img{
  margin: 0 10px;
@@ -137,6 +143,14 @@ h2 {
     animation-play-state: paused;
 }
 @keyframes logo_slide {
+    from{
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+@keyframes logo_slide_2 {
     from{
         transform: translateX(0);
     }
