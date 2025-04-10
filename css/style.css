@@ -287,6 +287,9 @@ h2 {
             border: none !important;
             border-bottom: 1px solid #413f3f !important;
         }
+        .banner h1 span {
+            display: block !important;
+        }
     }
     @media screen and (max-width: 567px) {
         .navbar-brand img {
@@ -300,9 +303,6 @@ h2 {
             transform: none !important;
              display: inline-block !important;
              margin-top: 15px;
-        }
-        .banner h1 span {
-            display: block;
         }
     }   
       
