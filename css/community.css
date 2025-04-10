@@ -20,7 +20,9 @@ body {
     font-size: 20px;
     font-weight: 600;
 }
-
+.navbar-brand img {
+  width: 250px;
+}
 .post_bar {
     box-shadow: 0 5px 9px rgba(0, 0, 0, 0.1);
     ;

@@ -50,6 +50,9 @@ h2 {
     width: 90%;
     top: 2rem;
 }
+.navbar-brand img {
+    width: 250px;
+}
 .active {
     color: #ffc067 !important;
     font-size: 20px;
@@ -269,6 +272,9 @@ h2 {
         .logo_slide img {
             width: 200px;
         }
+        .banner {
+            padding-top: 4rem !important;
+        }
     }
     @media screen and (max-width: 767px) {
         .logo_slide img {
@@ -294,6 +300,9 @@ h2 {
             transform: none !important;
              display: inline-block !important;
              margin-top: 15px;
+        }
+        .banner h1 span {
+            display: block;
         }
     }   
       

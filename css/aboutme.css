@@ -29,6 +29,9 @@ body {
 .mont_family {
     font-family: "Montserrat",serif;
 }
+.navbar-brand img {
+  width: 250px;
+}
 /* -------------------NAV HOVER------------------- */
 .nav-link:hover {
     color: #ffcc00 !important;
