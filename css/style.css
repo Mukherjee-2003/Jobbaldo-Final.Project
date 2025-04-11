@@ -55,8 +55,7 @@ h2 {
 }
 .active {
     color: #ffc067 !important;
-    font-size: 20px;
-    font-weight: 600;
+    font-weight: 800;
 }
 .nav-link:hover {
     color: #ffcc00 !important;
@@ -91,23 +90,52 @@ h2 {
    background-repeat: no-repeat;
    padding-top: 11rem !important;
 }
-.text_change::before{
-   content: "";
-   animation: 6s textChange infinite linear;
+.text-container,h1 {
+    height: 50px;
 }
-@keyframes textChange {
+.text-container {
+    line-height: 50px;
+    text-align: left;
+    overflow: hidden;
+}
+.texts {
+    position: relative;
+    animation: text-change ease 8s infinite;
+}
+@keyframes text-change {
     0% {
-        content: "Easier";
+        top: 0;
     }
-    25% {
-        content: "Faster";
+    10% {
+        top: 0;
     }
-    75% {
-        content: "Simpler";
+    20% {
+        top: -50px;
+    }
+    30% {
+        top: -50px;
+    }
+    40% {
+        top: -100px;
+    }
+    50% {
+        top: -100px;
+    }
+    60% {
+        top: 0;
+    }
+    70% {
+        top: 0px;
+    }
+    80% {
+       top: -50px;
+    }
+    90% {
+        top: -100px;
     }
     100% {
-        content: "Easier";
-    }
+        top: 0;
+    } 
 }
 /* ---------------------POPULAR CATEGORIES-------------------------- */
 .box_hover:hover {
@@ -300,9 +328,6 @@ h2 {
         .form_border {
             border: none !important;
             border-bottom: 1px solid #413f3f !important;
-        }
-        .banner h1 span {
-            display: block !important;
         }
     }
     @media screen and (max-width: 567px) {

@@ -10,8 +10,7 @@ body {
 }
 .active {
     color: #ffc067 !important;
-    font-size: 20px;
-    font-weight: 600;
+    font-weight: 800;
 }
 /* --------COLORS----------- */
 .bg_1 {
